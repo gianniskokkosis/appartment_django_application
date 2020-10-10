@@ -1,0 +1,1 @@
+# appartment_django_application
