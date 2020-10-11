@@ -1,0 +1,22 @@
+{% extends 'appartments/base.html' %}
+{% block content %}
+    <div class="mt-3" style='text-align: center'>
+        <h1>Details for {{ obj.title }}<h1>
+    </div>
+
+    <hr>
+
+    <div class="card mb-3 mt-3">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ obj.title }}</h5>
+            <p class="card-text">{{ obj.description }}</p>
+            <p class="card-text"><small class="text-muted"><b>Location:</b> {{ obj.location }} | <b>Price:</b> {{ obj.price }} $ | <b>Capacity:</b> {{ obj.capacity }}</small></p>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a class="btn btn-danger btn-lg mb-5" href="{% url 'purchase' obj.id %}">Purchase Now!</a>
+    </div>
+
+{% endblock content %}
