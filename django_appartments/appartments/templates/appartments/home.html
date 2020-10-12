@@ -7,7 +7,7 @@
 {% for appartment in appartments %}
 
     <div class="card mb-3 mt-3">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" src="{{ appartment.image.url }}" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{ appartment.title }}</h5>
             <p class="card-text">{{ appartment.description }}</p>
@@ -17,7 +17,7 @@
 
     <div class="mt-3">
         <a class="btn btn-warning btn-lg mb-5 mr-2" href="{% url 'details' appartment.id %}">View Details...</a>
-        <a class="btn btn-danger btn-lg mb-5" href="#">Purchase Now!</a>
+        <a class="btn btn-danger btn-lg mb-5" href="{% url 'purchase' appartment.id %}">Purchase Now!</a>
     </div>
 {% endfor %} 
 {% endblock content %}

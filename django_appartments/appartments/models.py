@@ -6,6 +6,7 @@ class Appartment(models.Model):
     description = models.TextField()
     price = models.FloatField()
     capacity = models.IntegerField()
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.title
